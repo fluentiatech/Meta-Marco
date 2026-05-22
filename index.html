@@ -144,8 +144,8 @@
   .nav-side a:hover{color:var(--gold)}
   .nav-side a:hover::after{transform:scaleX(1)}
 
-  /* Panel móvil (oculto en desktop) */
-  body > nav .links{display:none}
+  /* Panel móvil — fuera del nav para evitar el bug backdrop-filter/position:fixed en Safari */
+  #nav-links{display:none}
 
   /* Botón hamburguesa (mobile) */
   .nav-toggle{
@@ -181,12 +181,12 @@
     .nav-side{display:none}
     .brand{justify-self:start}
     .nav-toggle{display:block}
-    body > nav .links{
+    #nav-links{
       display:flex;
       position:fixed;
       top:64px;
       top:calc(64px + env(safe-area-inset-top, 0px));
-      left:0;right:0;
+      left:0;right:0;z-index:299;
       flex-direction:column;gap:0;
       background:rgba(10,10,10,.96);
       backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
@@ -195,10 +195,10 @@
       transform:translateY(-110%);
       transition:transform .35s cubic-bezier(.4,0,.2,1);
     }
-    body > nav .links.open{transform:translateY(0)}
-    body > nav .links a{padding:16px 0;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);font-weight:500}
-    body > nav .links a:last-child{border-bottom:none}
-    body > nav .links a:hover{color:var(--gold)}
+    #nav-links.open{transform:translateY(0)}
+    #nav-links a{padding:16px 0;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);font-weight:500}
+    #nav-links a:last-child{border-bottom:none}
+    #nav-links a:hover{color:var(--gold)}
   }
 
   /* Scroll container */
@@ -752,11 +752,12 @@
     font-size:11px;letter-spacing:.42em;text-transform:uppercase;
     color:var(--ink-dim);font-weight:500;
   }
+  .footer-dev-link{display:inline-flex;align-items:center;line-height:0}
   .footer-dev img{
     height:14px;width:auto;display:inline-block;
     opacity:.7;transition:opacity .3s ease, transform .3s ease;
   }
-  .footer-dev:hover img{opacity:1;transform:translateY(-1px)}
+  .footer-dev-link:hover img{opacity:1;transform:translateY(-1px)}
   @media(max-width:720px){.footer-dev{margin-top:24px;font-size:10px;letter-spacing:.32em;gap:10px}.footer-dev img{height:12px}}
 
   /* Decorative numbers running on side */
@@ -1008,13 +1009,14 @@
   <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <div class="links" id="nav-links">
-    <a href="#manifiesto">Por qué</a>
-    <a href="#modelos">Modelos</a>
-    <a href="#incluye">Qué incluye</a>
-    <a href="#contacto">Reservar</a>
-  </div>
 </nav>
+<!-- Panel móvil FUERA del nav — backdrop-filter en nav rompería position:fixed de un hijo en Safari -->
+<div class="links" id="nav-links">
+  <a href="#manifiesto">Por qué</a>
+  <a href="#modelos">Modelos</a>
+  <a href="#incluye">Qué incluye</a>
+  <a href="#contacto">Reservar</a>
+</div>
 
 <main class="scroll-container" id="main" itemscope itemtype="https://schema.org/WebPage">
 
@@ -1359,7 +1361,9 @@
   </div>
   <div class="footer-dev">
     <span>Crafted with</span>
-    <img src="fluentia_clean.png" alt="fluentIA" loading="lazy">
+    <a href="https://fluentiatech.es" target="_blank" rel="noopener noreferrer" class="footer-dev-link">
+      <img src="fluentia_clean.png" alt="fluentIA" loading="lazy">
+    </a>
     <span>precision</span>
   </div>
 </footer>
