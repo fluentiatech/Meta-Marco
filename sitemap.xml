@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemaps/image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://mimetaenmarco.es/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://mimetaenmarco.es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mimetaenmarco.es/" />
+    <image:image>
+      <image:loc>https://mimetaenmarco.es/logo-white.png</image:loc>
+      <image:title>Mi Meta en Marco — Marcos artesanales para carreras</image:title>
+      <image:caption>Logotipo Mi Meta en Marco</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mimetaenmarco.es/modelo-finisher.jpg</image:loc>
+      <image:title>Marco El Finisher — dorsal, medalla y foto de meta</image:title>
+      <image:caption>Marco artesanal de madera maciza negra para corredores. Maratón, media maratón, trail o carrera popular.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mimetaenmarco.es/modelo-clasico.jpg</image:loc>
+      <image:title>Marco El Clásico — dorsal y medalla en marco blanco</image:title>
+      <image:caption>Marco artesanal de madera blanca para dorsal y medalla de carrera. Regalo para corredor.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mimetaenmarco.es/modelo-coleccion.jpg</image:loc>
+      <image:title>Marco La Colección — multimedalla</image:title>
+      <image:caption>Marco artesanal multimedalla para corredores con varias carreras. Hasta 9 huecos.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Anclas de la home (Google las usa para subnavegación en SERP) -->
+  <url>
+    <loc>https://mimetaenmarco.es/#modelos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mimetaenmarco.es/#incluye</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mimetaenmarco.es/#faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mimetaenmarco.es/#contacto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    :root { color-scheme: light dark; }
+    .mark  { fill:   #0a0a0a; }
+    .frame { fill: none; stroke: #0a0a0a; stroke-width: 6.5; }
+    @media (prefers-color-scheme: dark) {
+      .mark  { fill:   #ffffff; }
+      .frame { stroke: #ffffff; }
+    }
+  </style>
+  <!-- Marco exterior -->
+  <rect class="frame" x="6" y="6" width="88" height="88"/>
+  <!-- Cinta izquierda de la medalla -->
+  <path class="mark" d="M 30 10 L 41 10 L 53 51 L 47 51 Z"/>
+  <!-- Cinta derecha de la medalla -->
+  <path class="mark" d="M 59 10 L 70 10 L 53 51 L 47 51 Z"/>
+  <!-- Anilla / pieza superior de la medalla -->
+  <rect class="mark" x="42" y="50" width="16" height="9"/>
+  <!-- Disco de la medalla -->
+  <circle class="mark" cx="50" cy="73" r="17"/>
+</svg>
